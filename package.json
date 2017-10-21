@@ -1,22 +1,22 @@
 {
   "name": "almost-extend",
-  "version": "v1.0.0-alpha.3",
+  "version": "v1.0.0-alpha.4",
   "description": "",
   "main": "index.js",
   "author": "Carlo Bernaschina (GitHub: B3rn475)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/B3rn475/almost-extend.git"
+    "url": "git+https://github.com/B3rn475/almostjs-extend.git"
   },
   "license": "MIT",
   "licenses": {
     "type": "MIT",
-    "url": "http://github.com/B3rn475/almost-extend/raw/master/LICENSE"
+    "url": "http://github.com/B3rn475/almostjs-extend/raw/master/LICENSE"
   },
   "bugs": {
-    "url": "https://github.com/B3rn475/almost-extend/issues"
+    "url": "https://github.com/B3rn475/almostjs-extend/issues"
   },
-  "homepage": "https://github.com/B3rn475/almost-extend#readme",
+  "homepage": "https://github.com/B3rn475/almostjs-extend#readme",
   "dependencies": {
     "lodash": "^4.17.4"
   },
