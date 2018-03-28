@@ -2,6 +2,9 @@
 __ALMOsT__ is an **A**gi**L**e **MO**del **T**ransformation framework for JavaScript
 
 [![NPM Version][npm-image]][npm-url]
+[![Build][travis-image]][travis-url]
+[![Build][appveyor-image]][appveyor-url]
+[![Test Coverage][coveralls-image]][coveralls-url]
 [![MIT licensed][license-image]][license-url]
 
 This repository contains the model extender module.
@@ -50,7 +53,7 @@ Elements must be **Object**s with the following attributes:
  - __type__ a __String__ identifing the type of the element
  - __attributes__ an __Object__ containing the attributes of the element (the internal structure is not fixed by this module)
  - __metadata__ [Optional] an __Object__ containing data not necessary to describe the element, but useful to enreach its description. (They shouldn't be used inside the rule __Activation Expression__)
- 
+
 ## Relations
 
 In __almostjs-extend__ relations must be structured as follow.
@@ -65,13 +68,13 @@ With __almostjs-extend__ you can create and __Extender__ a function which takes 
 
 ```javascript
   var createExtender = require('almost-extend').createExtender;
-  
+
   var extend = createExtender({
     type: {},
     relation: {}
     custom: {}
   });
-  
+
   var extended_model1 = extend(model1);
   var extended_model2 = extend(model2);
   // ...
@@ -107,7 +110,7 @@ This configuration will generate the helpers:
  - __isFoo__ which checks if an element (or the element related to an id) is has __type__ "my.identifier.for.foo"
  - __isBar__ which checks if an element (or the element related to an id) is has __type__ "my.identifier.for.bar"
  - __isBoth__ which checks if an element (or the element related to an id) is has __type__ "my.identifier.for.foo" or "my.identifier.for.bar"
- 
+
 #### Graph Navigation
 
 __getRelative__ helpers are generates starting from the __relation__ attribute of the configuration object.
@@ -129,7 +132,7 @@ This configuration will generate the helpers:
  - __getParent__ which returns the parent of an element (accepts an element or an id as input)
  - __getParentId__ which returns the id of the parent of an element (accepts an element or an id as input)
  - __getChildren__ which returns an __Array__ containing the ids of the children of an element (accepts an element or an id as input)
- 
+
 #### Custom Helpers
 
 __custom__ helpers are generated starting from the __custom__ attribute of the configuration object.
@@ -138,5 +141,11 @@ The __relation__ configuration must be and __Object__ where each attribute is a 
 
 [npm-image]: https://img.shields.io/npm/v/almost-extend.svg
 [npm-url]: https://npmjs.org/package/almost-extend
+[travis-image]: https://img.shields.io/travis/B3rn475/almostjs-extend/master.svg
+[travis-url]: https://travis-ci.org/B3rn475/almostjs-extend
+[appveyor-image]: https://ci.appveyor.com/api/projects/status/github/B3rn475/almostjs-extend?svg=true
+[appveyor-url]: https://ci.appveyor.com/project/B3rn475/almostjs-extend
+[coveralls-image]: https://img.shields.io/coveralls/B3rn475/almostjs-extend/master.svg
+[coveralls-url]: https://coveralls.io/r/B3rn475/almostjs-core?branch=master
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: https://raw.githubusercontent.com/B3rn475/almostjs-extend/master/LICENSE

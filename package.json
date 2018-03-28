@@ -21,11 +21,10 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "async": "^1.4.2",
-    "coveralls": "latest",
-    "istanbul": "latest",
-    "mocha": "latest",
-    "sinon": "^1.17.7"
+      "coveralls": "latest",
+      "istanbul": "latest",
+      "mocha": "latest",
+      "sinon": "^4.4.2"
   },
   "scripts": {
     "test": "mocha",
