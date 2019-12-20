@@ -21,14 +21,14 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-      "coveralls": "latest",
-      "istanbul": "latest",
-      "mocha": "latest",
-      "sinon": "^4.4.2"
+    "coveralls": "^3.0.9",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "sinon": "^4.4.2"
   },
   "scripts": {
-    "test": "mocha",
-    "coverage": "istanbul cover node_modules/mocha/bin/_mocha",
-    "coveralls": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+    "test": "mocha --recursive",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   }
 }
